@@ -19,5 +19,4 @@ public class mainController {
         }
         return (Arrays.toString(fibSequence.toArray()));
     }
-
 }
