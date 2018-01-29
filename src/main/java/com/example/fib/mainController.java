@@ -10,14 +10,11 @@ public class mainController {
 
     @RequestMapping(value = "/goalnumber" , method = RequestMethod.GET)
     public String showIndex(
-        @RequestParam("goalnumber") int number) {
+        @RequestParam("goalnumber") int goalNumber) {
         int i = 2;
         int sumNumbers = 0;
-        ArrayList<Integer> fibSequence = new ArrayList();
-        fibSequence.add(0);
-        fibSequence.add(1);
-
-        while (fibSequence.get(i-1) < number) {
+        ArrayList<Integer> fibSequence = new ArrayList<Integer>() {{add(0); add(1);}};
+        while (fibSequence.get(i-1) < goalNumber) {
             fibSequence.add(fibSequence.get(i-2) + fibSequence.get(i-1));
             i++;
         }
