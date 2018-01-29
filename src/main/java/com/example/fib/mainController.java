@@ -8,7 +8,7 @@ import java.util.Scanner;
 import static java.lang.Character.getNumericValue;
 
 @RestController
-public class MainController {
+public class mainController {
 
     @RequestMapping("/")
     public String showIndex() {
